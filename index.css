@@ -1,0 +1,118 @@
+:root {
+	--background: #eee;
+	--border: 1px solid lightgrey;
+	--card-background: white;
+	--card-border: 1px solid lightgrey;
+	--slide-dot-active-color: lightseagreen;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background: var(--background);
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+div.card {
+	width: 350px;
+	background: var(--card-background);
+	border: var(--card-border);
+	border-radius: 7px;
+	box-sizing: content-box;
+}
+
+div.card-header {
+	height: 70px;
+	display: grid;
+	grid-template-columns: 40px auto;
+	align-items: center;
+	grid-gap: 10px;
+	padding: 10px;
+}
+
+div.avatar {
+	border: var(--border);
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+}
+
+div.username {
+	border: var(--border);
+	width: 200px;
+	height: 20px;
+	border-radius: 10px;
+}
+
+div.card-body {
+	scroll-snap-type: x mandatory;
+	display: flex;
+	overflow: hidden;
+	scroll-behavior: smooth;
+	width: 100%;
+	height: 350px;
+}
+
+div.slide {
+	scroll-snap-align: start;
+	height: 100%;
+	min-width: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+div.slide-1 {
+	background-image: url(assets/images/slide-1.jpg);
+}
+
+div.slide-2 {
+	background-image: url(assets/images/slide-2.jpg);
+}
+
+div.slide-3 {
+	background-image: url(assets/images/slide-3.jpg);
+}
+
+div.card-footer {
+	height: 70px;
+	display: grid;
+	grid-template-columns: repeat(3, 30px) auto 90px;
+	align-items: center;
+	grid-gap: 10px;
+	padding: 10px;
+}
+
+div.button {
+	border: var(--border);
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+}
+
+div.button:last-child {
+	justify-self: flex-end;
+}
+
+div.slide-dots {
+	display: flex;
+	gap: 5px;
+	justify-content: center;
+}
+
+div.slide-dot {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	border: var(--border);
+}
+
+div.slide-dot.active {
+	background-color: var(--slide-dot-active-color);
+	border-color: var(--slide-dot-active-color);
+}
